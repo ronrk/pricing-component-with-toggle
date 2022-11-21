@@ -38,7 +38,7 @@ body {
   margin: 5rem auto;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   padding: 3rem 7rem;
 }
