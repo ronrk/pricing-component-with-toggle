@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import HeaderToggle from "./Components/HeaderToggle";
+import BoxContainer from "./Components/BoxContainer";
 
-function App() {
+const App = () => {
+  const [monthlyPricing, setMonthlyPricing] = useState(false);
+  const toggleHandler = (value) => {
+    setMonthlyPricing(value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <HeaderToggle toggleHandler={toggleHandler} />
+      <BoxContainer isMonthly={monthlyPricing} />
     </div>
   );
-}
+};
 
 export default App;
